@@ -109,7 +109,7 @@ var family = new FamilyTree(document.getElementById("tree"), {
                 icon: FamilyTree.icon.edit(24, 24, '#fff'),
                 text: 'Edit',
                 hideIfEditMode: true,
-                hideIfDetailsMode: false
+                hideIfDetailsMode: true
             },
             share: {
                 icon: FamilyTree.icon.share(24, 24, '#fff'),
