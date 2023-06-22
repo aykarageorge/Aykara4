@@ -113,7 +113,9 @@ var family = new FamilyTree(document.getElementById("tree"), {
             },
             share: {
                 icon: FamilyTree.icon.share(24, 24, '#fff'),
-                text: 'Share'
+                text: 'Share',
+                hideIfEditMode: true,
+                hideIfDetailsMode: true
             },
             pdf: {
                 icon: FamilyTree.icon.pdf(24, 24, '#fff'),
