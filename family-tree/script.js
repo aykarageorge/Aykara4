@@ -73,8 +73,24 @@ FamilyTree.elements.textarea = function (data, editElement, minWidth, readOnly) 
 
 };
 
+FamilyTree.miniMap.colors = ["#FFCA28", "#F57C00", "#039be5", "#757575"];
+FamilyTree.miniMap.selectorBackgroundColor = "#888888";
+FamilyTree.miniMap.focusStroke = "#039BE5";
+FamilyTree.miniMap.opacity = 0.2;
+FamilyTree.miniMap.border = '2px solid #039BE5';
+FamilyTree.miniMap.width = 200;
+FamilyTree.miniMap.height = 100;
+FamilyTree.miniMap.padding = 10;
+FamilyTree.miniMap.position = {
+  top: 'padding',
+  left: 'padding',
+  right: undefined,
+  bottom: undefined
+};
+
 var family = new FamilyTree(document.getElementById("tree"), {
-    mouseScrool: FamilyTree.action.ctrlZoom,
+    mouseScrool: FamilyTree.action.zoom,
+    miniMap: true,
     template: "hugo",
     enableSearch: true,
     nodeBinding: {
