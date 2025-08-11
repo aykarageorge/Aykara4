@@ -50,7 +50,7 @@
               <a href="services.html" class="nav-link">Services</a>
             </li>
             <li class="nav-item">
-              <a href="blog.html" class="nav-link">News</a>
+              <a href="blog.html" class="nav-link">Blog</a>
             </li>
             <li class="nav-item">
               <a href="contact.html" class="nav-link">Contact</a>
@@ -58,7 +58,7 @@
           </ul>
 
           <div class="ml-auto">
-            <a href="#" class="btn btn-outline rounded-pill">Get a Quote</a>
+            <a href="contact.html" class="btn btn-outline rounded-pill">Get a Quote</a>
           </div>
         </div>
       </div>
@@ -354,11 +354,11 @@
               </li>
               <li>
                 <div class="icon"><span class="mai-mail"></span></div>
-                <div class="content"><a href="#">aykara4official@gmail.com</a></div>
+                <div class="content"><a href="mailto:aykara4official@gmail.com">aykara4official@gmail.com</a></div>
               </li>
               <li>
                 <div class="icon"><span class="mai-phone-portrait"></span></div>
-                <div class="content"><a href="#">+91(854)757-1854</a></div>
+                <div class="content"><a href="tel:+918547571854">+91(854)757-1854</a></div>
               </li>
             </ul>
           </div>
@@ -388,7 +388,7 @@
       <div class="container">
         <div class="text-center wow fadeInUp">
           <div class="subhead">Our Blog</div>
-          <h2 class="title-section">Read our latest <span class="marked">News</span></h2>
+          <h2 class="title-section">Read our latest <span class="marked">Blog</span></h2>
           <div class="subhead">Coming Soon</div>
           <div class="divider mx-auto"></div>
         </div>
@@ -514,27 +514,27 @@
           <h3><span class="text-primary">Aykara4</span></h3>
           <p>Start Digitising your Dreams today.</p>
 
-          <p><a href="#" >aykara4official@gmail.com</a></p>
-          <p><a href="#">+91(854)757-1854</a></p>
+          <p><a href="mailto:aykara4official@gmail.com">aykara4official@gmail.com</a></p>
+          <p><a href="tel:+918547571854">+91(854)757-1854</a></p>
         </div>
         <div class="col-lg-3 py-3">
-          <h5>Quick Links</h5>
+          <h5>Services</h5>
           <ul class="footer-menu">
-            <li><a href="#">How it works</a></li>
-            <li><a href="#">Security</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Resources</a></li>
-            <li><a href="#">Report a Bug</a></li>
+            <li><a href="services.html">Web Development</a></li>
+            <li><a href="services.html">Mobile Apps</a></li>
+            <li><a href="services.html">Cloud Solutions</a></li>
+            <li><a href="services.html">AI Integration</a></li>
+            <li><a href="services.html">Consultation</a></li>
           </ul>
         </div>
         <div class="col-lg-3 py-3">
-          <h5>About Us</h5>
+          <h5>Company</h5>
           <ul class="footer-menu">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Jobs</a></li>
-            <li><a href="#">Our Teams</a></li>
-            <li><a href="#">Testimonials</a></li>
-            <li><a href="#">News & Press</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
           </ul>
         </div>
         <div class="col-lg-3 py-3">
@@ -554,14 +554,14 @@
 
       <div class="row">
         <div class="col-sm-6 py-2">
-          <p id="copyright">&copy; 2023 <a href="https://aykara4.com/">Aykara4</a>. All rights reserved</p>
+          <p id="copyright">&copy; <span id="current-year">2025</span> <a href="https://aykara4.com/">Aykara4</a>. All rights reserved</p>
         </div>
         <div class="col-sm-6 py-2 text-right">
           <div class="d-inline-block px-3">
-            <a href="#">Privacy</a>
+            <a href="privacy-policy.html">Privacy</a>
           </div>
           <div class="d-inline-block px-3">
-            <a href="#">Contact Us</a>
+            <a href="contact.html">Contact Us</a>
           </div>
         </div>
       </div>
@@ -585,6 +585,16 @@
 
   <script src="./assets/js/theme.js"></script>
 
+  <script>
+    // Dynamic copyright year
+    document.addEventListener('DOMContentLoaded', function() {
+      const currentYear = new Date().getFullYear();
+      const yearElement = document.getElementById('current-year');
+      if (yearElement) {
+        yearElement.textContent = currentYear;
+      }
+    });
+  </script>
 
 </body>
 </html>
