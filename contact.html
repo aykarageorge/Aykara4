@@ -157,7 +157,7 @@
 
                   var params = new URLSearchParams({ name: name, email: email, message: message });
 
-                  fetch(SCRIPT_URL, { method: ‘POST’, body: params, mode: ‘no-cors’ })
+                  fetch(SCRIPT_URL + ‘?’ + params.toString(), { mode: ‘no-cors’ })
                     .then(function () {
                       status.textContent = "Thanks! We’ll be in touch shortly.";
                       status.style.color = ‘#28a745’;
