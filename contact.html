@@ -157,25 +157,20 @@
 
                   var params = new URLSearchParams({ name: name, email: email, message: message });
 
-                  fetch(SCRIPT_URL, { method: 'POST', body: params })
-                    .then(function (res) { return res.json(); })
-                    .then(function (data) {
-                      if (data.result === 'success') {
-                        status.textContent = "Thanks! We’ll be in touch shortly.";
-                        status.style.color = '#28a745';
-                        document.getElementById('contactForm').reset();
-                      } else {
-                        throw new Error('Unexpected response');
-                      }
+                  fetch(SCRIPT_URL, { method: ‘POST’, body: params, mode: ‘no-cors’ })
+                    .then(function () {
+                      status.textContent = "Thanks! We’ll be in touch shortly.";
+                      status.style.color = ‘#28a745’;
+                      document.getElementById(‘contactForm’).reset();
                     })
                     .catch(function () {
-                      status.textContent = 'Something went wrong. Please email us directly at aykara4official@gmail.com';
-                      status.style.color = '#dc3545';
+                      status.textContent = ‘Something went wrong. Please email us directly at aykara4official@gmail.com’;
+                      status.style.color = ‘#dc3545’;
                     })
                     .finally(function () {
                       btn.disabled = false;
-                      btn.textContent = 'Send Message';
-                      status.style.display = 'block';
+                      btn.textContent = ‘Send Message’;
+                      status.style.display = ‘block’;
                     });
                 });
               })();
